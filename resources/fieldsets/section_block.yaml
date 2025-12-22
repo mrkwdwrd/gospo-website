@@ -1,0 +1,51 @@
+title: 'Page Section'
+fields:
+  -
+    handle: section_title
+    field:
+      type: text
+      display: 'Section Title'
+      validate:
+        - required
+  -
+    handle: section_content
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+      smart_typography: true
+      remove_empty_nodes: true
+      type: bard
+      display: 'Section Content'
+  -
+    handle: section_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Section Image'
+      validate:
+        - image
+  -
+    handle: section_link
+    field:
+      type: link
+      display: 'Section Link'
+      validate:
+        - required
+        - active_url
+      width: 50
+  -
+    handle: section_link_text
+    field:
+      type: text
+      display: 'Section Link Text'
+      width: 50

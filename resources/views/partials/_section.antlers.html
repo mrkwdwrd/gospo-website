@@ -1,0 +1,25 @@
+<section id="{{ id }}" class="w-full md:min-h-(--min-height) box-border flex flex-col items-stretch content-stretch items-center gap-10 p-12 {{ reversed ? 'md:flex-row-reverse' : 'md:flex-row' }}">
+    <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <h2 class="text-2xl font-semibold dark:text-white tracking-wide">
+            {{ slot:title }}
+        </h2>
+        <hr class="w-48 text-rose-500 my-4 border-2"/>
+        <div>
+            {{ slot:content }}
+        </div>
+        {{ if linkUrl }}
+        <div class="mt-8">
+            {{ partial:button url="{{ linkUrl }}"}}
+                {{ slot:text }}
+                    {{ linkText ?? linkUrl }}
+                {{ /slot:text }}
+            {{ /partial:button }}
+        </div>
+        {{ /if }}
+    </div>
+    <div
+        class="w-full md:w-1/2 text-center rounded-sm bg-center bg-cover overflow-hidden"
+        style="background-image: url('{{ slot:image }}');">
+        <img src="{{ slot:image }}" class="block md:hidden"/>
+    </div>
+</section>

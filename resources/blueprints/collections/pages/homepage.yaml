@@ -1,0 +1,95 @@
+title: Homepage
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+      -
+        display: Education
+        fields:
+          -
+            import: section_block
+            prefix: education_
+      -
+        display: Events
+        fields:
+          -
+            import: section_block
+            prefix: events_
+      -
+        display: Artists
+        fields:
+          -
+            handle: artists_title
+            field:
+              type: text
+              display: Title
+          -
+            handle: artists_content
+            field:
+              buttons:
+                - bold
+                - italic
+                - removeformat
+              smart_typography: true
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+          -
+            handle: artist_list_title
+            field:
+              type: text
+              display: 'Artist List Title'
+          -
+            handle: artist_list
+            field:
+              type: replicator
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    artist:
+                      display: Artist
+                      fields:
+                        -
+                          import: artist
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

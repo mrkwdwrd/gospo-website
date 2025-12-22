@@ -1,0 +1,28 @@
+title: Artist
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+      validate:
+        - required
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+  -
+    handle: image
+    field:
+      container: assets
+      type: assets
+      display: Image
+      validate:
+        - required
+        - image
+  -
+    handle: link
+    field:
+      type: link
+      display: Link

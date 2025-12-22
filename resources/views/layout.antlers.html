@@ -4,12 +4,50 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
+        <title>{{ site:name }} | {{ title }}</title>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="bg-slate-100 dark:bg-gray-800 font-sans leading-normal text-slate-800 dark:text-gray-400">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
+    <body class="min-w-xs bg-zinc-200 dark:bg-zinc-900 font-sans leading-normal text-zinc-800 dark:text-zinc-400">
+        <header class="bg-white dark:bg-black static md:sticky flex flex-col md:flex-row justify-between items-center top-0 px-8 pt-2 pb-4">
+            <div class="flex flex-col text-black dark:text-white">
+                <a
+                    href="/"
+                    title="{{ site:name }}"
+                    class="site-logo h-18">
+                    {{ site:name }}
+                </a>
+                <span class="site-tagline text-xs">Events | Education | Entertainment</span>
+            </div>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex gap-10 justify-center md:justify-end">
+                    {{ nav:main }}
+                        <li><a href="{{ url }}">{{ title }}</a></li>
+                    {{ /nav:main }}
+                </ul>
+            </nav>
+        </header>
+        <div>
             {{ template_content }}
         </div>
+        <footer class="bg-white dark:bg-black md:sticky bottom-0">
+            <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row gap-8 justify-between items-center text-black dark:text-white">
+                <nav class="flex gap-5 text-sm items-center">
+                    Follow us:
+                    <ul class="flex gap-4">
+                        {{ nav:social }}
+                        <li>
+                            <a href="{{ url }}" title="Gospo on {{ title }}" class="icon-{{$ strtolower($title) $}} h-6" target="_blank">{{ title }}</a>
+                        </li>
+                        {{ /nav:social }}
+                    </ul>
+                </nav>
+                <span class="text-xs text-zinc-800 dark:text-zinc-300">
+                    Copyright &copy; {{$ date('Y') $}} - Gospo Pty Ltd. All rights reserved.
+                </span>
+                <span class="text-xs text-zinc-600">
+                    Site by <a href="https://markwoodward.com.au" target="_blank" class="hover:underline">@mrkwdwrd</a>.
+                </span>
+            </div>
+        </footer>
     </body>
 </html>
