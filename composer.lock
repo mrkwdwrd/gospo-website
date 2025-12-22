@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a27c873bb55a4589c124b6dce4f4c2cf",
+    "content-hash": "7bc57f0a085c2ee0145bdaa150ca9dca",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4345,6 +4345,71 @@
             "time": "2025-02-14T12:29:50+00:00"
         },
         {
+            "name": "spatie/fork",
+            "version": "1.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/fork.git",
+                "reference": "bde768a99be8cff41b8ec4991b016dcb58f414e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/fork/zipball/bde768a99be8cff41b8ec4991b016dcb58f414e8",
+                "reference": "bde768a99be8cff41b8ec4991b016dcb58f414e8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pcntl": "*",
+                "ext-sockets": "*",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "nesbot/carbon": "^2.66",
+                "pestphp/pest": "^1.23",
+                "phpunit/phpunit": "^9.5",
+                "spatie/ray": "^1.10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Fork\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brent Roose",
+                    "email": "brent@spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A lightweight solution for running code concurrently in PHP",
+            "homepage": "https://github.com/spatie/fork",
+            "keywords": [
+                "fork",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/fork/issues",
+                "source": "https://github.com/spatie/fork/tree/1.2.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-04-24T08:58:04+00:00"
+        },
+        {
             "name": "spatie/shiki-php",
             "version": "2.3.2",
             "source": {
@@ -4523,6 +4588,55 @@
                 }
             ],
             "time": "2025-12-03T18:32:28+00:00"
+        },
+        {
+            "name": "statamic/ssg",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/ssg.git",
+                "reference": "c5be777a1e8ebb78c468a5d034ea4910bed24a4a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/ssg/zipball/c5be777a1e8ebb78c468a5d034ea4910bed24a4a",
+                "reference": "c5be777a1e8ebb78c468a5d034ea4910bed24a4a",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^5.41"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.28 || ^9.6.1",
+                "phpunit/phpunit": "^10.5.35"
+            },
+            "suggest": {
+                "spatie/fork": "Required to generate pages concurrently (^0.0.4)."
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Statamic\\StaticSite\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Static Site Generator",
+                    "description": "Generate static sites with Statamic."
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\StaticSite\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Generate static sites with Statamic.",
+            "support": {
+                "issues": "https://github.com/statamic/ssg/issues",
+                "source": "https://github.com/statamic/ssg/tree/3.1.1"
+            },
+            "time": "2025-02-24T16:05:36+00:00"
         },
         {
             "name": "statamic/stringy",
