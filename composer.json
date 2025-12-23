@@ -81,7 +81,8 @@
         "build": [
             "npm run build",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan key:generate",
+            "@php artisan key:generate --ansi",
+            "@php artisan cache:clear",
             "@php please ssg:generate"
         ]
     },
