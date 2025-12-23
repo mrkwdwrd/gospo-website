@@ -1,0 +1,12 @@
+{{ if feature_display }}
+<section
+class="w-full md:min-h-(--min-height) box-border gap-10 p-12 bg-fixed text-white"
+style="background-image: url('{{ feature_background_image }}'); background-size: cover; background-position: center bottom;">
+    <div class="flex min-w-2xl">
+        <div class="w-1/2"></div>
+        <div class="w-1/2">
+            {{ feature_content }}
+        </div>
+    </div>
+</section>
+{{ /if feature_display }}

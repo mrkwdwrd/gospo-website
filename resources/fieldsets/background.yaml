@@ -1,0 +1,82 @@
+title: Background
+fields:
+  -
+    handle: background_colour
+    field:
+      type: color
+      display: Colour
+      width: 33
+  -
+    handle: background_image
+    field:
+      container: assets
+      type: assets
+      display: Image
+      width: 66
+      max_files: 1
+      min_files: 1
+  -
+    handle: background_position_x
+    field:
+      options:
+        -
+          key: left
+          value: Left
+        -
+          key: center
+          value: Center
+        -
+          key: right
+          value: Right
+      inline: true
+      type: radio
+      display: 'Position X'
+      width: 50
+  -
+    handle: background_position_y
+    field:
+      options:
+        -
+          key: top
+          value: Top
+        -
+          key: center
+          value: Center
+        -
+          key: bottom
+          value: Bottom
+      inline: true
+      type: radio
+      display: 'Position Y'
+      width: 50
+  -
+    handle: background_size
+    field:
+      options:
+        -
+          key: cover
+          value: Cover
+        -
+          key: contain
+          value: Contain
+      inline: true
+      type: radio
+      display: Size
+      width: 50
+  -
+    handle: background_attachment
+    field:
+      options:
+        -
+          key: fixed
+          value: Fixed
+        -
+          key: scroll
+          value: Scroll
+        -
+          key: local
+          value: Local
+      inline: true
+      type: radio
+      display: Attachment
+      width: 50
