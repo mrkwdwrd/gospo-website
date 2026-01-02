@@ -2,16 +2,20 @@ tree:
   -
     id: 16022021-0287-4fa3-9ee4-705f89dae3f9
     title: Education
-    url: '#education'
+    url: '/#education'
   -
     id: d634f5b8-282c-4757-9c9a-a6442aa03a8d
     title: Events
-    url: '#events'
+    url: '/#events'
   -
     id: a6ec9039-ced6-4e22-9c99-0c00dc472ad2
     title: About
-    url: '#about'
+    url: '/#about'
+  -
+    id: a6c8870c-8f4b-41d7-ae02-7c25c2ccffa4
+    title: Shop
+    url: /shop
   -
     id: 68815e60-16a0-45d6-8df6-38ecca27ff0d
     title: Contact
-    url: '#contact'
+    url: /contact

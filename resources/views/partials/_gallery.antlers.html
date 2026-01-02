@@ -1,0 +1,53 @@
+<div id="main" class="transition bg-contain" style="background-image: url('{{ images:0:url }}');">
+    <img src="{{ images:0:url }}" alt="{{ images:0:alt }}" style="opacity: 0; transition: opacity 0.25s;"/>
+</div>
+
+<ul id="nav" class="flex gap-2 p-2 items-stretch">
+    {{ images }}
+    <li>
+        <button class="cursor-pointer opacity-60 transition-opacity  border-transparent border">
+            <img src="{{ url }}" alt="{{ alt }}" />
+        </button>
+    </li>
+    {{ /images}}
+</ul>
+
+<style>
+    .current {
+        opacity: 1;
+        border: 1px solid;
+    }
+</style>
+
+<script>
+    const imageContainer = document.getElementById('main')
+    const imageNav = document.getElementById('nav')
+    const buttons = imageNav.getElementsByTagName('button')
+    const img = imageContainer.querySelector('img')
+
+    Array.from(buttons).forEach((btn, i) => {
+        if (i === 0) {
+            btn.classList += ' current'
+        }
+        btn.addEventListener('click', showImage)
+    })
+
+    function showImage (e) {
+        img.style.opacity = 1
+        img.src = e.target.src
+        showCurrent(e.target)
+        setTimeout(() => {
+            imageContainer.style.backgroundImage = `url(${e.target.src})`
+            img.style.opacity = 0
+        }, 250)
+    }
+
+    function showCurrent (btn) {
+        const current = imageNav.querySelector('.current')
+        let classes = current.classList
+        classes.remove('current')
+        current.classList = classes
+        btn.parentElement.classList += ' current'
+    }
+</script>
+

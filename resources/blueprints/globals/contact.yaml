@@ -1,0 +1,23 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: phone
+            field:
+              type: text
+          -
+            handle: email
+            field:
+              type: text
+          -
+            handle: education_email
+            field:
+              type: text
+          -
+            handle: education_website
+            field:
+              type: text
+              display: 'Education Website'

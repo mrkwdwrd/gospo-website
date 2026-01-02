@@ -1,0 +1,53 @@
+title: Product
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              type: text
+              display: Description
+              width: 50
+          -
+            handle: price
+            field:
+              type: float
+              display: Price
+              width: 50
+          -
+            import: background
+            prefix: product_
+          -
+            handle: content
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+          -
+            handle: images
+            field:
+              mode: grid
+              container: assets
+              type: assets
+              display: Images
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

@@ -1,0 +1,11 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: client_id
+            field:
+              type: text
+              display: 'Client ID'

@@ -15,7 +15,7 @@ tabs:
           -
             handle: content
             field:
-              type: markdown
+              type: bard
               display: Content
               localizable: true
           -

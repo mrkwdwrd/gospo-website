@@ -43,7 +43,7 @@ events_section_content:
         text: 'Regardless of whether your event is intimate or grandiose, trusting us to as your agent and consultant will ensure you find the right performance, ensemble, DJ and even production to cater for the specifics needs, tastes and budget for you, your clients and guests.'
 events_section_link: 'https://education.gospo.com'
 updated_by: b2879438-b457-4dae-bd9e-2143be2699a2
-updated_at: 1766491484
+updated_at: 1766492365
 education_section_link_text: 'Enquire Now'
 events_section_link_text: 'Get In Touch'
 artists:

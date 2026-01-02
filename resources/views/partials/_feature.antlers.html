@@ -1,12 +1,14 @@
 {{ if feature_display }}
-<section
-class="w-full md:min-h-(--min-height) box-border gap-10 p-12 bg-fixed text-white"
-style="background-image: url('{{ feature_background_image }}'); background-size: cover; background-position: center bottom;">
-    <div class="flex min-w-2xl">
-        <div class="w-1/2"></div>
-        <div class="w-1/2">
+<div class="" style="background-image: url('{{ feature_background_image }}'); background-size: cover; background-position: center bottom; background-attachment: fixed;">
+    <section
+        class="container mx-auto md:min-h-(--min-height) box-border flex flex-col md:flex-row items-stretch content-stretch gap-10 p-12">
+        <div class="w-full md:w-1/2 text-center rounded-sm bg-center bg-contain bg-no-repeat overflow-hidden"
+            style="background-image: url('{{ feature_image }}');">
+            <img src="{{ feature_image }}" class="block md:hidden" />
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center text-white">
             {{ feature_content }}
         </div>
-    </div>
-</section>
+    </section>
+</div>
 {{ /if feature_display }}

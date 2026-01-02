@@ -81,25 +81,7 @@ tabs:
             field:
               type: toggle
               display: Display
-              width: 33
-          -
-            handle: feature_date_from
-            field:
-              type: date
-              display: 'Display From'
-              width: 33
-              validate:
-                - sometimes
-                - date
-          -
-            handle: feature_date_to
-            field:
-              type: date
-              display: 'Display Until'
-              width: 33
-              validate:
-                - sometimes
-                - 'after:date_from'
+              width: 25
           -
             handle: feature_image
             field:
@@ -108,14 +90,13 @@ tabs:
               container: assets
               type: assets
               display: Image
-              width: 33
+              width: 75
           -
             handle: feature_content
             field:
               remove_empty_nodes: false
               type: bard
               display: Content
-              width: 66
               buttons:
                 - h2
                 - h3
