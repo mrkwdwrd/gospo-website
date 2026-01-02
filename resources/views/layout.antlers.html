@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site:short_locale }}">
+<html lang="{{ site:short_locale }}" data-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +7,9 @@
         <title>{{ site:name }} | {{ title }}</title>
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
-    <body class="min-w-xs bg-zinc-200 dark:bg-zinc-900 font-sans leading-normal text-zinc-800 dark:text-zinc-400 bg-linear-to-tr  from-zinc-200 to-gray-200 dark:from-zinc-900 dark:to-gray-950 bg-fixed">
-        <header class="bg-white dark:bg-black static md:sticky flex flex-col md:flex-row justify-between items-center top-0 px-8 pt-2 pb-4">
-            <div class="flex flex-col text-black dark:text-white">
+    <body class="min-w-xs bg-zinc-900 font-sans leading-normal text-zinc-400 bg-linear-to-tr  from-zinc-900 to-gray-950 bg-fixed">
+        <header class="bg-black static md:sticky flex flex-col md:flex-row justify-between items-center top-0 px-8 pt-2 pb-4">
+            <div class="flex flex-col text-white">
                 <a
                     href="/"
                     title="{{ site:name }}"
@@ -29,8 +29,8 @@
         <div>
             {{ template_content }}
         </div>
-        <footer class="bg-white dark:bg-black md:sticky bottom-0">
-            <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row gap-8 justify-between items-center text-black dark:text-white">
+        <footer class="bg-black md:sticky bottom-0">
+            <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row gap-8 justify-between items-center text-white">
                 <nav class="flex gap-5 text-sm items-center">
                     Follow us:
                     <ul class="flex gap-4">
@@ -41,7 +41,7 @@
                         {{ /nav:social }}
                     </ul>
                 </nav>
-                <span class="text-xs text-zinc-800 dark:text-zinc-300">
+                <span class="text-xs text-zinc-300">
                     Copyright &copy; {{$ date('Y') $}} - Gospo Pty. Ltd. All rights reserved.
                 </span>
                 <span class="text-xs text-zinc-600">

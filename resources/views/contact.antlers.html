@@ -3,19 +3,19 @@
         <header class="w-full p-8 bg-no-repeat bg-fixed bg-cover bg-gray-600"
             style="background-image: url('{{ product_background_image }}');">
             <h1
-                class="text-4xl font-bold text-black dark:text-white tracking-wider text-shadow-lg text-shadow-gray-800">
+                class="text-4xl font-bold text-white tracking-wider text-shadow-lg text-shadow-gray-800">
                 {{ title }}
             </h1>
             <hr class="w-48 text-rose-500 my-4 border-2 mx-auto" />
         </header>
 
         <div class="container mx-auto gap-8 p-8 md:p-16">
-            <div class="text-black dark:text-white">
+            <div class="text-white">
                 {{ content | widont }}
             </div>
 
             <div
-                class="mt-12 flex md:flex-row-reverse items-center justify-center-safe max-w-3xl mx-auto p-4 border border-zinc-500 rounded-sm bg-zinc-200 dark:bg-zinc-900">
+                class="mt-12 flex md:flex-row-reverse items-center justify-center-safe max-w-3xl mx-auto p-4 border border-zinc-500 rounded-sm bg-zinc-900">
                 <div class="flex flex-col gap-8 p-4 text-left text-white">
                     <div>
                         <h4 class="font-semibold my-4">General Enquiries &amp; Bookings:</h4>
@@ -117,21 +117,6 @@
         </div>
     </div>
 </main>
-{{# <main class="mx-auto">
-    <div class="w-full md:min-h-(--min-height) box-border text-center">
-        <header class="w-full p-8 bg-gray-300">
-            <h1 class="text-4xl font-bold text-black dark:text-white tracking-wider text-shadow-lg text-shadow-gray-800">
-                {{ title }}
-            </h1>
-            <hr class="w-48 text-rose-500 my-4 border-2 mx-auto" />
-
-        </header>
-        <div class="mt-12 text-black dark:text-white">
-            {{ content | widont }}
-        </div>
-
-    </div>
-</main> #}}
 
 <script>
     function handleSubmit(event) {

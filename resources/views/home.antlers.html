@@ -1,16 +1,16 @@
 <main class="mx-auto">
-    <header class="w-full md:min-h-(--min-height) bg-zinc-100 dark:bg-zinc-950 relative -z-1 min-h-128">
+    <header class="w-full md:min-h-(--min-height) bg-zinc-950 relative -z-1 min-h-128">
     <div
         class="relative z-1 md:min-h-(--min-height) min-h-128 flex flex-col justify-center-safe text-center px-4 py-8 bg-zinc-950/80 bg-blend-multiply">
 
-        <h1 class="text-4xl font-bold text-black dark:text-white tracking-wider text-shadow-lg text-shadow-gray-800">
+        <h1 class="text-4xl font-bold text-white tracking-wider text-shadow-lg text-shadow-gray-800">
             <span class="site-logo hidden! md:block! md:h-36 mx-auto mb-12">
                 {{ site:name }}
             </span>
             {{ title }}
         </h1>
         <hr class="w-48 text-rose-500 my-4 border-2 mx-auto" />
-        <div class="mx-auto text-black dark:text-white max-w-3xl">
+        <div class="mx-auto text-white max-w-3xl">
             {{ content | widont }}
         </div>
     </div>
@@ -69,23 +69,23 @@
     <section id="about"
         class="w-full md:min-h-(--min-height) box-border text-center p-12 flex flex-col justify-center bg-gray-900">
         <div>
-            <h2 class="text-2xl font-semibold dark:text-white tracking-wide">
+            <h2 class="text-2xl font-semibold text-white tracking-wide">
                 {{ artists_title }}
             </h2>
             <hr class="w-48 text-rose-500 my-4 border-2 mx-auto" />
             <div class="text-center max-w-2xl mx-auto">
                 {{ artists_content | widont }}
             </div>
-            <h3 class="text-xl font-semibold dark:text-white tracking-wide">{{ artist_list_title }}</h3>
+            <h3 class="text-xl font-semibold text-white tracking-wide">{{ artist_list_title }}</h3>
             <ul class="flex flex-col md:flex-row w-full max-w-3xl gap-4 my-8 mx-auto">
                 {{ artist_list }}
                 <li class="border rounded-md overflow-hidden p-4 flex items-stretch">
-                    <figure class="bg-zinc-100 dark:bg-zinc-800 rounded-sm overflow-hidden">
+                    <figure class="bg-zinc-800 rounded-sm overflow-hidden">
                         <a href="{{ link }}" title="{{ name }}" class="block overflow-hidden" tabindex="-1" target="_blank">
                             <img src="{{ image[0] }}" alt="{{ name }}" class="hover:scale-[1.025] transition" />
                         </a>
-                        <figcaption class="p-2 bg-zinc-100 dark:bg-zinc-800">
-                            <h4 class="text-md font-semibold dark:text-white tracking-wide">
+                        <figcaption class="p-2 bg-zinc-800">
+                            <h4 class="text-md font-semibold text-white tracking-wide">
                                 <a href="{{ link }}" class="hover:underline" target="_blank">{{ name }}</a>
                             </h4>
                             <p class="m-0!">{{ description }}</p>
