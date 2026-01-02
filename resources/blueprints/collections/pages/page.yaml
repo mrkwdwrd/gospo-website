@@ -24,6 +24,9 @@ tabs:
               type: template
               display: Template
               localizable: true
+          -
+            import: background
+            prefix: page_
   sidebar:
     display: Sidebar
     sections:
