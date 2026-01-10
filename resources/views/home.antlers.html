@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="absolute top-0 left-0 right-0 bottom-0 z-0  md:min-h-(--min-height) overflow-clip">
-            <video class="w-auto h-auto min-w-screen min-h-screen max-w-none absolute top-1/2 left-1/2 -translate-1/2" muted loop autoplay>
+            <video poster="assets/gospo-night-at-the-barracks.jpg" class="w-auto h-auto min-w-screen min-h-screen max-w-none absolute top-1/2 left-1/2 -translate-1/2" muted loop autoplay playsinline>
                 <source src="assets/Whitney_1_16-9_v1.mp4" type="video/mp4">
             </video>
         </div>
@@ -104,3 +104,16 @@
         </div>
     </section>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementsByTagName('video')[0]
+        if (video.paused) {
+            video.play().catch(() => {
+                video.pause();
+                video.currentTime = 0;
+                video.load();
+            })
+        }
+    })
+</script>

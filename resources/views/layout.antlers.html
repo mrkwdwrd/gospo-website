@@ -14,6 +14,7 @@
                     <a
                         href="/"
                         title="{{ site:name }}"
+                        aria-label="Home"
                         class="site-logo h-12 md:h-18">
                         {{ site:name }}
                     </a>
@@ -22,6 +23,11 @@
                 {{ partial:menu-toggle hide-at='md' button-id='toggle-menu' }}
                     <nav class="text-white flex flex-col h-screen w-screen md:h-auto md:w-auto">
                         <ul class="overflow-scroll md:bg-none md:static flex flex-col md:flex-row gap-10 md:justify-end p-8 md:p-0">
+                            <li class="md:hidden text-center">
+                                <a href="/" title="{{ site:name }}" aria-label="Home" class="site-logo h-12 mx-auto">
+                                    {{ site:name }}
+                                </a>
+                            </li>
                             {{ nav:main }}
                                 <li class="text-2xl md:text-lg text-center">
                                     <a href="{{ url }}" title="{{ title }}" class="hover:text-rose-700 active:text-rose-800 transition">{{ title }}</a>
