@@ -60,21 +60,36 @@
     const target = document.getElementById('{{ button-id }}-target')
 
     button.addEventListener('click', toggleMenu)
-    target.addEventListener('visibilitychange', (e) => {
-        console.warn('here')
-    })
 
     function toggleMenu (e) {
         e.preventDefault()
-        const target = document.getElementById('{{ button-id }}-target')
-        const active = e.target.classList.contains('active')
+        const active = (button || target).classList.contains('active')
         if (active) {
-            e.target.classList.remove('active')
-            target.classList.remove('active')
-            return
+            return closeMenu()
         }
+        document.addEventListener('keydown', handleKeyDown)
+        target.addEventListener('click', handleMenuClick)
         e.target.classList.add('active')
         target.classList.add('active')
         return
+    }
+
+    function handleKeyDown(e) {
+        if (e.key === 'Escape') {
+            closeMenu()
+        }
+    }
+
+    function handleMenuClick (e) {
+        if (e.target.tagName === 'A') {
+            closeMenu()
+        }
+    }
+
+    function closeMenu () {
+        document.removeEventListener('keydown', handleKeyDown)
+        target.removeEventListener('click', handleMenuClick)
+        button.classList.remove('active')
+        target.classList.remove('active')
     }
 </script>
