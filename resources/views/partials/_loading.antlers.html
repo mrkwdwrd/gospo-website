@@ -1,0 +1,35 @@
+<div id="loader" class="loading fixed bg-black w-screen h-screen z-100 flex justify-center items-center">
+    <div>
+        <span class="site-logo h-12 md:h-24 bg-animated"></span>
+    </div>
+</div>
+
+<style>
+    #loader {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    #loader.loading {
+        opacity: 1;
+    }
+    .bg-animated {
+        background: linear-gradient(45deg, #1a1a20, #e4e4e7, #1d2128, #ffffff, #1a1a20);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+        background-position: 0% 50%;
+        }
+        25% {
+            background-position: 33% 50%;
+        }
+        75% {
+            background-position: 66% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+</style>
