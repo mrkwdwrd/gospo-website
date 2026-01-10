@@ -8,50 +8,52 @@
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body class="min-w-xs leading-normal text-zinc-300 bg-linear-to-tr to-zinc-900 from-gray-950 bg-fixed" style="overscroll-behavior: none">
-        <header class="bg-black static md:sticky flex flex-col md:flex-row justify-between items-center top-0 px-8 pt-2 pb-4 z-20">
-            <div class="flex flex-col text-white">
-                <a
-                    href="/"
-                    title="{{ site:name }}"
-                    class="site-logo h-12 md:h-18">
-                    {{ site:name }}
-                </a>
-                <span class="site-tagline text-xs">Events | Education | Entertainment</span>
+        <div class="wrapper">
+            <header class="bg-black static md:sticky flex flex-col md:flex-row justify-between items-center top-0 px-8 pt-2 pb-4 z-20">
+                <div class="flex flex-col text-white">
+                    <a
+                        href="/"
+                        title="{{ site:name }}"
+                        class="site-logo h-12 md:h-18">
+                        {{ site:name }}
+                    </a>
+                    <span class="site-tagline text-xs">Events | Education | Entertainment</span>
+                </div>
+                {{ partial:menu-toggle hide-at='md' button-id='toggle-menu' }}
+                    <nav class="text-white flex flex-col h-screen w-screen md:h-auto md:w-auto">
+                        <ul class="overflow-scroll md:bg-none md:static flex flex-col md:flex-row gap-10 md:justify-end p-8 md:p-0">
+                            {{ nav:main }}
+                                <li class="text-2xl md:text-lg text-center">
+                                    <a href="{{ url }}" title="{{ title }}" class="hover:text-rose-700 active:text-rose-800 transition">{{ title }}</a>
+                                </li>
+                            {{ /nav:main }}
+                        </ul>
+                    </nav>
+                {{ /partial:menu-toggle }}
+            </header>
+            <div>
+                {{ template_content }}
             </div>
-            {{ partial:menu-toggle hide-at='md' button-id='toggle-menu' }}
-                <nav class="text-white flex flex-col h-screen w-screen md:h-auto md:w-auto">
-                    <ul class="overflow-scroll md:bg-none md:static flex flex-col md:flex-row gap-10 md:justify-end p-8 md:p-0">
-                        {{ nav:main }}
-                            <li class="text-2xl md:text-lg text-center">
-                                <a href="{{ url }}" title="{{ title }}" class="hover:text-rose-700 active:text-rose-800 transition">{{ title }}</a>
+            <footer class="bg-black md:sticky bottom-0">
+                <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row gap-8 justify-between items-center text-white">
+                    <nav class="flex gap-5 text-sm items-center">
+                        Follow us:
+                        <ul class="flex gap-4">
+                            {{ nav:social }}
+                            <li>
+                                <a href="{{ url }}" title="Gospo on {{ title }}" class="icon-{{$ strtolower($title) $}} h-6 hover:text-rose-700 active:text-rose-800 transition" target="_blank">{{ title }}</a>
                             </li>
-                        {{ /nav:main }}
-                    </ul>
-                </nav>
-            {{ /partial:menu-toggle }}
-        </header>
-        <div>
-            {{ template_content }}
+                            {{ /nav:social }}
+                        </ul>
+                    </nav>
+                    <span class="text-xs text-zinc-300">
+                        Copyright &copy; {{$ date('Y') $}} - Gospo Pty. Ltd. All rights reserved.
+                    </span>
+                    <span class="text-xs text-zinc-600">
+                        Site by <a href="https://markwoodward.com.au" target="_blank" class="hover:underline">@mrkwdwrd</a>.
+                    </span>
+                </div>
+            </footer>
         </div>
-        <footer class="bg-black md:sticky bottom-0">
-            <div class="container mx-auto px-8 py-4 flex flex-col md:flex-row gap-8 justify-between items-center text-white">
-                <nav class="flex gap-5 text-sm items-center">
-                    Follow us:
-                    <ul class="flex gap-4">
-                        {{ nav:social }}
-                        <li>
-                            <a href="{{ url }}" title="Gospo on {{ title }}" class="icon-{{$ strtolower($title) $}} h-6 hover:text-rose-700 active:text-rose-800 transition" target="_blank">{{ title }}</a>
-                        </li>
-                        {{ /nav:social }}
-                    </ul>
-                </nav>
-                <span class="text-xs text-zinc-300">
-                    Copyright &copy; {{$ date('Y') $}} - Gospo Pty. Ltd. All rights reserved.
-                </span>
-                <span class="text-xs text-zinc-600">
-                    Site by <a href="https://markwoodward.com.au" target="_blank" class="hover:underline">@mrkwdwrd</a>.
-                </span>
-            </div>
-        </footer>
     </body>
 </html>

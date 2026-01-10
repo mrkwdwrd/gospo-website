@@ -1,10 +1,16 @@
-<button id="{{ button-id }}" class="block {{ hide-at }}:hidden fixed bg-black cursor-pointer top-2 right-2 z-10 p-2 rounded" aria-label="Show menu" title="Close menu">
-    <div class="inner h-6 w-8 relative pointer-events-none">
-        <span></span>
-        <span></span>
-        <span></span>
+<div class="w-screen fixed top-0 right-0 left-0 flex justify-end-safe z-10">
+    <div class="h-8 w-full min-w-xs text-right p-1">
+        <button id="{{ button-id }}"
+            class="inline-block {{ hide-at }}:hidden bg-black cursor-pointer p-2 rounded"
+            aria-label="Show menu" title="Close menu">
+            <div class="inner h-6 w-8 relative pointer-events-none">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
     </div>
-</button>
+</div>
 <div id="{{ button-id }}-target"
     class="menu-container hidden fixed bg-black h-full w-full top-0
         {{ hide-at }}:h-auto {{ hide-at }}:block {{ hide-at }}:static {{ hide-at }}:bg-none">
@@ -51,7 +57,12 @@
 
 <script>
     const button = document.getElementById('{{ button-id }}')
+    const target = document.getElementById('{{ button-id }}-target')
+
     button.addEventListener('click', toggleMenu)
+    target.addEventListener('visibilitychange', (e) => {
+        console.warn('here')
+    })
 
     function toggleMenu (e) {
         e.preventDefault()
