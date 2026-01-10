@@ -1,0 +1,69 @@
+<button id="{{ button-id }}" class="block {{ hide-at }}:hidden fixed bg-black cursor-pointer top-2 right-2 z-10 p-2 rounded" aria-label="Show menu" title="Close menu">
+    <div class="inner h-6 w-8 relative pointer-events-none">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</button>
+<div id="{{ button-id }}-target"
+    class="menu-container hidden fixed bg-black h-full w-full top-0
+        {{ hide-at }}:h-auto {{ hide-at }}:block {{ hide-at }}:static {{ hide-at }}:bg-none">
+    {{ slot }}
+</div>
+
+<style>
+    button span {
+        background-color: currentColor;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        display: block;
+        position: absolute;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        transform-origin: left center;
+        pointer-events: none;
+    }
+    button span:nth-child(1) {
+        top: 0;
+    }
+    button span:nth-child(2) {
+        top: calc(50% - 1px);
+    }
+    button span:nth-child(3) {
+        top: calc(100% - 2px);
+    }
+    button.active span:nth-child(1) {
+        transform: rotate(45deg) translate(2px, -2px);
+    }
+    button.active span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+    button.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(2px, 2px);
+    }
+    .menu-container.active {
+        display: block;
+    }
+</style>
+
+<script>
+    const button = document.getElementById('{{ button-id }}')
+    button.addEventListener('click', toggleMenu)
+
+    function toggleMenu (e) {
+        e.preventDefault()
+        const target = document.getElementById('{{ button-id }}-target')
+        const active = e.target.classList.contains('active')
+        if (active) {
+            e.target.classList.remove('active')
+            target.classList.remove('active')
+            return
+        }
+        e.target.classList.add('active')
+        target.classList.add('active')
+        return
+    }
+</script>

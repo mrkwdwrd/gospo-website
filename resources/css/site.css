@@ -19,6 +19,9 @@
 body {
     @apply font-suse text-sm sm:text-base md:text-lg
 }
+body:has(.menu-container.active) {
+    @apply overflow-hidden;
+}
 
 h1 {
     @apply md:text-5xl
