@@ -91,31 +91,6 @@ feature_background_position_y: bottom
 feature_background_attachment: fixed
 feature_content:
   -
-    type: heading
-    attrs:
-      level: 3
-    content:
-      -
-        type: text
-        text: 'Adelaide Fringe 2026'
-  -
-    type: heading
-    attrs:
-      level: 2
-    content:
-      -
-        type: text
-        text: 'Jackson Vs. Jackson'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: 'Presented by Gospo and Gluttony'
-  -
     type: paragraph
     content:
       -
@@ -127,18 +102,6 @@ feature_content:
       -
         type: text
         text: 'This high-energy production explodes with gospel harmonies, a live band, dynamic choir, dazzling vocals and choreography that celebrates the sound, soul and style of pop’s most iconic duo. After sell-out seasons in 2018 and 2019, Gospo are back at Gluttony in 2026 for a triumphant return season.'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: '★★★★½ “With soulful originality and uplifting energy … everyone was encouraged to get up and have a boogie!” — Play & Go Adelaide.'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: '★★★★ “A thrilling, feel-good concert packed with extraordinary vocal talent.” — Arts Review.'
 content:
   -
     type: paragraph

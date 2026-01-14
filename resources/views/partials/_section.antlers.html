@@ -10,9 +10,7 @@
         {{ if linkUrl }}
         <div class="mt-8">
             {{ partial:button url="{{ linkUrl }}"}}
-                {{ slot:text }}
-                    {{ linkText ?? linkUrl }}
-                {{ /slot:text }}
+                {{ linkText ?? linkUrl }}
             {{ /partial:button }}
         </div>
         {{ /if }}

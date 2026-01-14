@@ -1,13 +1,32 @@
 {{ if feature_display }}
-<div class="" style="background-image: url('{{ feature_background_image }}'); background-size: cover; background-position: center bottom; background-attachment: fixed;">
-    <section
-        class="container mx-auto md:min-h-(--min-height) box-border flex flex-col md:flex-row items-stretch content-stretch gap-10 p-12">
-        <div class="w-full md:w-1/2 text-center rounded-sm bg-center bg-contain bg-no-repeat overflow-hidden"
-            style="background-image: url('{{ feature_image }}');">
-            <img src="{{ feature_image }}" class="block md:hidden" />
-        </div>
-        <div class="w-full md:w-1/2 flex flex-col justify-center-safe text-white">
-            {{ feature_content }}
+<div id="adelaide-fringe-2026" class="bg-[#dddad3] flex items-stretch p-4 md:pt-28 overflow-hidden min-h-screen md:min-h-(--min-height)">
+    <section class="container mx-auto">
+        <div class="md:grid md:gap-5 md:grid-cols-5 md:grid-rows-2 lg:grid-rows-1">
+            <div class="md:col-span-3">
+                <div class="relative z-1">
+                    <div class="absolute -indent-[999em]">
+                        <h2>Jackson Vs. Jackson</h2>
+                        <p>Presented by Gospo and Gluttony</p>
+                        <p>Featuring Gospo Collective</p>
+                        <p>Arranged & directed by Charmaine Janitha Jones</p>
+                    </div>
+                    <img src="/assets/fringe-2026/fringe-2026-title.svg" />
+                </div>
+            </div>
+            <div class="relative z-1 md:col-span-2 md:row-span-2 lg:row-span-1 flex items-center lg:items-end">
+                <div class="text-center font-semibold">
+                    <h3 class="text-rose-500 text-lg font-bold">Adelaide Fringe 2026</h3>
+                    <div class="text-base lg:text-lg text-black ">
+                        {{ feature_content }}
+                    </div>
+                    {{ partial:button url="" }}
+                    Buy Tickets Now
+                    {{ /partial:button }}
+                </div>
+            </div>
+            <div class="relative z-0 md:col-span-3 lg:col-span-5 bg-cover bg-top lg:-mt-72" style="background-image: url(/assets/fringe-2026/fringe-2026-bg.png);">
+                <img src="/assets/fringe-2026/fringe-2026-bg.png"  class="opacity-0"/>
+            </div>
         </div>
     </section>
 </div>
