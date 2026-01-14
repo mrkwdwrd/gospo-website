@@ -14,7 +14,7 @@
             <div class="text-white">
                 {{ content | widont }}
             </div>
-
+            <div id="submitMsg" class="hidden mt-8 text-green-600"></div>
             <div
                 class="mt-12 md:flex md:flex-row-reverse items-center justify-center-safe max-w-3xl mx-auto p-4 border border-zinc-500 rounded-sm bg-zinc-900">
                 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)"
@@ -121,13 +121,43 @@
 
 <script>
     function handleSubmit(event) {
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-    }
 
-    if (window.location.search.includes('success=true')) {
-        document.getElementById('successMessage').classList.add('show');
-        document.querySelector('form').reset();
+        event.preventDefault();
+        console.warn(event)
+
+        const button = document.getElementById('submitBtn')
+        const message = document.getElementById('submitMsg')
+        const form = event.target
+        const data = new FormData(form)
+        const label = button.textContent
+
+        message.classList.remove('text-red-500')
+        message.classList.remove('block!')
+
+        message.textContent = ''
+
+        button.disabled = true
+        button.textContent = 'Sending...'
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(data).toString()
+        })
+        .then(() => {
+            form.reset()
+            message.textContent = 'Thanks! Your message has been received!'
+            message.classList.add('block!')
+            button.textContent = label
+            setTimeout(() => {
+                message.classList.remove('block!')
+            }, 4000)
+        })
+        .catch(error => {
+            message.textContent = error
+            message.classList.add('text-red-500!')
+            message.classList.add('block!')
+            button.textContent = label
+        })
     }
 </script>
