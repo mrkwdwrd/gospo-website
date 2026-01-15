@@ -41,6 +41,7 @@ return [
     'copy' => [
         public_path('build')    => 'build',
         public_path('assets')   => 'assets',
+        public_path('_redirects') => '_redirects',
     ],
 
     'symlinks' => [
