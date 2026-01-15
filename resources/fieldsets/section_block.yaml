@@ -41,7 +41,6 @@ fields:
       display: 'Section Link'
       validate:
         - required
-        - active_url
       width: 50
   -
     handle: section_link_text

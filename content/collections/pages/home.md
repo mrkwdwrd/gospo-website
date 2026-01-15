@@ -16,7 +16,7 @@ education_section_content:
         text: 'As advocates for education in music – a universal language, Gospo aims to put performers on the map in a competitive industry.'
       -
         type: text
-        text: ' We believe in the importance of developing the minds of the young and the young at heart. Learn from leading professionals in the industry with our structured programs, tailored workshops, seminars, coaching and individual lessons.'
+        text: ' We believe in the importance of developing the minds of the young and the young at heart. 026 Adelaide Fringe SeasonLearn from leading professionals in the industry with our structured programs, tailored workshops, seminars, coaching and individual lessons.'
   -
     type: paragraph
     content:
@@ -25,8 +25,40 @@ education_section_content:
         marks:
           -
             type: bold
-        text: 'Details for how to join us on stage for Fringe 2026 are coming very soon – please keep checking back!'
-education_section_link: 'https://education.gospo.com'
+        text: 'Join us on stage for Adelaide Fringe 2026!'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://education.gospo.com.au/courses/gospo-fringe-2026-backing-choir'
+              rel: noopener
+              target: _blank
+              title: '2026 Adelaide Fringe Backing Choir'
+          -
+            type: bold
+        text: '2026 Fringe Backing Choir'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://education.gospo.com.au/courses/gospo-fringe-2026-juniors'
+              rel: noopener
+              target: _blank
+              title: 'GOSPO Juniors 2026 Fringe Season'
+          -
+            type: bold
+        text: '2026 Fringe Juniors'
+education_section_link: 'https://education.gospo.com.au'
 events_section_title: 'Music & Events'
 events_section_content:
   -
@@ -41,10 +73,10 @@ events_section_content:
       -
         type: text
         text: 'Regardless of whether your event is intimate or grandiose, trusting us to as your agent and consultant will ensure you find the right performance, ensemble, DJ and even production to cater for the specifics needs, tastes and budget for you, your clients and guests.'
-events_section_link: 'https://education.gospo.com'
+events_section_link: 'entry::67b749e7-67b7-46b5-b45a-f0a7ecc54f5f'
 updated_by: b2879438-b457-4dae-bd9e-2143be2699a2
-updated_at: 1766492365
-education_section_link_text: 'Enquire Now'
+updated_at: 1768466243
+education_section_link_text: 'Course Enrolments'
 events_section_link_text: 'Get In Touch'
 artists:
   - pages

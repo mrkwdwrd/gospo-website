@@ -51,6 +51,9 @@ ol {
 ol li p {
     @apply mt-2 mb-2
 }
+ main a:not(.button) {
+    @apply text-rose-500 hover:underline hover:text-rose-400
+ }
 
 .site-logo  {
     display: block;
