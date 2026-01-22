@@ -42,6 +42,7 @@ return [
         public_path('build')    => 'build',
         public_path('assets')   => 'assets',
         public_path('_redirects') => '_redirects',
+        public_path('_headers') => '_headers',
     ],
 
     'symlinks' => [
