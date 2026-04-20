@@ -25,7 +25,7 @@ education_section_content:
         marks:
           -
             type: bold
-        text: 'Join us for Term 2 in 2026 - enrollments open now with rehearsals commencing on May 4th.'
+        text: 'Join us for Term 2 in 2026 - enrolments open now with rehearsals commencing on May 4th.'
   -
     type: paragraph
     content:
@@ -75,7 +75,7 @@ events_section_content:
         text: 'Regardless of whether your event is intimate or grandiose, trusting us to as your agent and consultant will ensure you find the right performance, ensemble, DJ and even production to cater for the specifics needs, tastes and budget for you, your clients and guests.'
 events_section_link: 'entry::67b749e7-67b7-46b5-b45a-f0a7ecc54f5f'
 updated_by: b2879438-b457-4dae-bd9e-2143be2699a2
-updated_at: 1776680791
+updated_at: 1776681282
 education_section_link_text: 'Course Enrolments'
 events_section_link_text: 'Get In Touch'
 artists:
